@@ -66,15 +66,15 @@ namespace trilha_net_poo_desafio.Models
 
         public void UsarDoWhile()
         {
-            string opcao;
+            int opcao;
             do
             {
-                ImprimirCabecalho();
-                ImprimirMenu();
-                opcao = Console.ReadLine();
-                ExecutarOpcoesMenu(Convert.ToInt32(opcao));
-                ImprimirRodape();
-            } while (opcao != "0");
+            ImprimirCabecalho();
+            ImprimirMenu();
+            opcao = LerOpcaoUsuario();
+            ExecutarOpcoesMenu(opcao);
+            ImprimirRodape();
+            } while (opcao != 0);
         }
 
     }
